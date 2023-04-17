@@ -1,3 +1,12 @@
-<components-radio-option
-  [option]="{ label: 'test', value: 'value' }"
-></components-radio-option>
+<div *ngFor="let option of options">
+  <label for="{{ option.value }}" class="radio-inline">
+    {{ option.label }}</label
+  >
+  <input
+    id="{{ option.value }}"
+    [value]="option.value"
+    [formControl]="selectedOptionFormControl"
+    type="radio"
+  />
+  <br />
+</div>

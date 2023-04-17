@@ -1,5 +1,15 @@
 <p>home page!</p>
 
 <components-radio-group
-  [options]="[{ label: 'test', value: 'value' }]"
+  #radioGroup
+  [options]="[
+    { label: 'option1', value: '1' },
+    { label: 'option2', value: '2' }
+  ]"
 ></components-radio-group>
+
+<br />
+
+<div>Selected Option:{{ radioGroup.selectedOptionFormControl.value }}</div>
+
+<div>Number of selection changes: {{ changes }}</div>

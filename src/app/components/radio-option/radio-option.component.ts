@@ -11,5 +11,5 @@ export interface RadioButtonOption {
   styleUrls: ['./radio-option.component.scss'],
 })
 export class RadioOptionComponent {
-  @Input() option!: RadioButtonOption;
+  @Input() option: RadioButtonOption;
 }

@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { RadioButtonOption } from '../radio-option/radio-option.component';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'components-radio-group[options]',
@@ -8,4 +9,8 @@ import { RadioButtonOption } from '../radio-option/radio-option.component';
 })
 export class RadioGroupComponent {
   @Input() options!: RadioButtonOption[];
+
+  selectedOptionFormControl = new FormControl<string>('');
+
+  constructor() {}
 }
